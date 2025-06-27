@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>科学と音楽のカフェ</title>
+    <script src="https://cdn.tailwindcss.com/3.4.1"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1B365D', // Dark Blue
+                        secondary: '#897A5F', // Brownish Grey
+                        'body-bg': '#F8F8F8',
+                        'body-text': '#333333',
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px' 
+                    },
+                    fontFamily: {
+                        'noto-serif': ['"Noto Serif JP"', 'serif'],
+                        'zen-maru': ['"Zen Maru Gothic"', 'sans-serif'],
+                        'pacifico': ['"Pacifico"', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;700&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Serif JP', serif;
+            background-color: #F8F8F8; /* body-bg */
+            color: #333333; /* body-text */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .handwritten {
+            font-family: 'Zen Maru Gothic', sans-serif;
+        }
+        
+        .nav-link {
+            position: relative;
+            padding-bottom: 4px; /* Space for the underline */
+        }
+        
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #1B365D; /* primary color */
+            transition: width 0.3s ease-in-out;
+            /* Using a simpler solid line as SVG was complex to integrate here directly */
+        }
+
+        .nav-link.active::after,
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .section-divider {
+            height: 5px;
+            background-image: url("data:image/svg+xml,%3Csvg width='200' height='5' viewBox='0 0 200 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 2.5C50 0.5 150 4.5 200 2.5' stroke='%23897A5F' stroke-width='1.5' stroke-linecap='round' stroke-dasharray='10 5'/%3E%3C/svg%3E");
+            background-repeat: repeat-x;
+            background-size: 200px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .notebook-bg {
+            background-image: linear-gradient(to bottom, #F8F8F8 1.1rem, #e0e0e0 1.2rem);
+            background-size: 100% 1.2rem;
+            padding: 2rem; /* Added padding as in example */
+            border-radius: 8px; /* DEFAULT */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* shadow-md */
+        }
+        
+        .hero-doodle {
+            background-image: url("https://readdy.ai/api/search-image?query=hand-drawn%20science%20and%20music%20doodles%20on%20white%20background%2C%20pencil%20sketches%20of%20musical%20notes%2C%20scientific%20formulas%2C%20books%2C%20laboratory%20equipment%2C%20minimalist%20style%2C%20academic%20atmosphere%2C%20light%20and%20clean&width=1200&height=600&seq=1&orientation=landscape");
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        
+        /* Ensure inputs use the default border radius */
+        input[type="email"], input[type="text"], textarea {
+          border-radius: 8px; /* DEFAULT */
+        }
+        input:focus, textarea:focus {
+          outline: none;
+          box-shadow: 0 0 0 2px theme('colors.primary'); /* focus:ring-primary */
+        }
+
+        /* For Remixicon default size adjustment if needed */
+        .ri-lg { font-size: 1.33333333em; line-height: 0.75em; vertical-align: -0.0667em; }
+        .ri-2x { font-size: 2em; }
+    </style>
+    <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^18.2.0/",
+    "react/": "https://esm.sh/react@^18.2.0/",
+    "react": "https://esm.sh/react@^18.2.0",
+    "@heroicons/react/": "https://esm.sh/@heroicons/react@^2.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="font-noto-serif bg-body-bg text-body-text">
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
