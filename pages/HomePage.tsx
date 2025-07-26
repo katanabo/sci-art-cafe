@@ -84,7 +84,7 @@ const HomePage: React.FC<HomePageProps> = ({ navigateTo }) => {
 
       {/* Character Section */}
       <section className="flex justify-center items-center space-x-8">
-        <img src="/gakucafekun_01.png" alt="がくカフェくん" className="h-48" />
+        <img src="/gakucafekun_01.png" alt="がくカフェくん" className="h-24 md:h-48" />
         <div className="bg-white p-6 rounded-lg shadow-md relative">
           <div className="absolute top-1/2 -left-4 w-4 h-4 bg-white transform -translate-y-1/2 rotate-45"></div>
           <p className="text-lg">科学と音楽のカフェへようこそ！<br />ここでは、科学の不思議と音楽の楽しさが一度に味わえるんだ。<br />リラックスして、新しい発見を楽しんでいってね！</p>

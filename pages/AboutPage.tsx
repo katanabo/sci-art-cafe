@@ -13,7 +13,7 @@ const AboutPage: React.FC = () => {
 
       {/* Main Concept */}
       <section className="max-w-4xl mx-auto flex items-center">
-        <img src="/gakucafekun_02.png" alt="がくカフェくん" className="h-48 mr-8" />
+        <img src="/gakucafekun_02.png" alt="がくカフェくん" className="h-24 md:h-48 mr-8" />
         <div className="bg-white p-6 sm:p-8 rounded-lg shadow-md border border-gray-100 flex-1">
           <h3 className="handwritten text-2xl font-bold mb-4 text-secondary">専門知をもっと身近に</h3>
           <p className="mb-4 text-gray-700 leading-relaxed">仙台は“学都”として大学や研究機関が集積していますが、専門的な知識に日常の中で触れる機会はまだ限られています。「科学と音楽のカフェ」は、カフェのようなリラックスした空間で、科学や音楽に関する話題を気軽に楽しめる場を提供します。このイベントをきっかけに、仙台はもっと気軽に学びにふれられる、知的で楽しい街へと変わっていきます。科学や音楽について話し合えるこの場所が、仙台の新しい魅力のひとつになっていくことを目指しています。</p>
