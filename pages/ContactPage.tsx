@@ -26,7 +26,7 @@ const ContactPage: React.FC = () => {
       return Object.keys(data)
         .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
         .join("&");
-    }
+    };
 
     try {
       await fetch("/", {
@@ -113,30 +113,6 @@ const ContactPage: React.FC = () => {
           </form>
         </div>
       </section>
-
-      {/* Optional: Newsletter Section (if not in footer) */}
-      <section className="py-16 bg-primary bg-opacity-5 rounded-lg">
-            <div className="container mx-auto px-4 text-center">
-                <h2 className="handwritten text-2xl md:text-3xl font-bold mb-6 text-primary">イベント情報をお届けします</h2>
-                <p className="mb-8 max-w-2xl mx-auto text-gray-700">メールマガジンに登録いただくと、最新のイベント情報やカフェの新メニュー情報をいち早くお届けします。</p>
-                
-                <form className="max-w-md mx-auto flex">
-                    <input 
-                        type="email" 
-                        placeholder="メールアドレス" 
-                        className="flex-grow px-4 py-3 border border-gray-300 !rounded-l-button focus:ring-1 focus:ring-primary focus:border-primary"
-                        aria-label="メールアドレス"
-                    />
-                    <button 
-                        type="submit" 
-                        className="handwritten px-6 py-3 bg-primary text-white font-medium !rounded-r-button hover:bg-opacity-90 transition-colors whitespace-nowrap"
-                    >
-                        登録する
-                    </button>
-                </form>
-            </div>
-        </section>
-
     </div>
   );
 };
