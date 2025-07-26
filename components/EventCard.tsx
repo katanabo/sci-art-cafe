@@ -26,8 +26,7 @@ const CategoryBadge: React.FC<{ category: EventInfo['category'] }> = ({ category
 };
 
 const EventCard: React.FC<EventCardProps> = ({ event, navigateTo }) => {
-  const placeholderImage = `https://picsum.photos/seed/${event.id}/400/250`;
-  const displayImageUrl = event.imageUrl?.url || placeholderImage;
+  const displayImageUrl = event.imageUrl?.url;
 
   const handleClick = () => {
     if (navigateTo) {
@@ -41,8 +40,8 @@ const EventCard: React.FC<EventCardProps> = ({ event, navigateTo }) => {
       onClick={handleClick}
     >
       {displayImageUrl && (
-        <div className="w-full h-48 mb-4 rounded overflow-hidden">
-          <img src={displayImageUrl} alt={event.title} className="w-full h-full object-cover" />
+        <div className="w-full mb-4 rounded overflow-hidden">
+          <img src={displayImageUrl} alt={event.title} className="w-full h-auto" />
         </div>
       )}
       <div className="flex justify-between items-start mb-3 sm:mb-4">

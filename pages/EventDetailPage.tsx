@@ -82,12 +82,12 @@ const EventDetailPage: React.FC<EventDetailPageProps> = ({ eventId, navigateTo }
       </button>
 
       <div className="bg-white p-6 sm:p-8 rounded shadow-md border border-gray-100">
+        <h1 className="handwritten text-3xl sm:text-4xl font-bold text-primary mb-4">{event.title}</h1>
         {event.imageUrl?.url && (
-          <div className="w-full h-64 sm:h-80 mb-6 rounded overflow-hidden">
-            <img src={event.imageUrl.url} alt={event.title} className="w-full h-full object-cover" />
+          <div className="w-full max-w-2xl mx-auto mb-6 rounded overflow-hidden">
+            <img src={event.imageUrl.url} alt={event.title} className="w-full h-auto" />
           </div>
         )}
-        <h1 className="handwritten text-3xl sm:text-4xl font-bold text-primary mb-4">{event.title}</h1>
         <div className="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed">
           <p className="whitespace-pre-wrap">{event.longDescription || event.description}</p>
         </div>

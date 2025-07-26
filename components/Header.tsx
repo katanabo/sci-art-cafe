@@ -17,10 +17,10 @@ const Header: React.FC<HeaderProps> = ({ cafeName, navItems, currentPage, naviga
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
           <button
             onClick={() => navigateTo(Page.HOME)}
-            className="handwritten text-2xl font-bold text-primary focus:outline-none"
+            className="focus:outline-none"
             aria-label="ホームへ戻る"
           >
-            {cafeName}
+            <img src="/kagakuongaku_logo.png" alt={`${cafeName} logo`} className="h-10" />
           </button>
           
           <nav className="hidden md:flex space-x-8">
