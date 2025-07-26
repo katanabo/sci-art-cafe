@@ -11,7 +11,7 @@ const Footer: React.FC<FooterProps> = ({ cafeName }) => {
         <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
           <div className="mb-6 md:mb-0">
             <a href="#" onClick={(e) => { e.preventDefault(); /* Ideally navigate to home */}} className="handwritten text-xl font-bold text-primary hover:text-opacity-80 transition-colors">
-              {cafeName}
+              <img src="/kagakuongaku_logo.png" alt={`${cafeName} logo`} className="h-12 mx-auto md:mx-0" />
             </a>
             <p className="mt-2 text-sm text-gray-600">知的好奇心と感性が共鳴する空間</p>
           </div>

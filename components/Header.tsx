@@ -20,7 +20,7 @@ const Header: React.FC<HeaderProps> = ({ cafeName, navItems, currentPage, naviga
             className="focus:outline-none"
             aria-label="ホームへ戻る"
           >
-            <img src="/kagakuongaku_logo.png" alt={`${cafeName} logo`} className="h-10" />
+            <img src="/kagakuongaku_logo.png" alt={`${cafeName} logo`} className="h-12" />
           </button>
           
           <nav className="hidden md:flex space-x-8">
@@ -49,7 +49,7 @@ const Header: React.FC<HeaderProps> = ({ cafeName, navItems, currentPage, naviga
       
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-white w-full absolute top-16 left-0 z-40 shadow-md"> {/* Adjust top to match header height */}
+        <div className="md:hidden bg-white w-full fixed top-0 left-0 h-full z-40 shadow-md pt-16"> {/* Adjust top to match header height */}
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             {navItems.map((item) => (
               <button
